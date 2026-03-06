@@ -1,4 +1,5 @@
 // NeighbourGood Website — Main JavaScript
+// Version: 1.0.0
 // Theme toggle, copy-to-clipboard, scroll reveal, mobile nav
 
 (function () {
