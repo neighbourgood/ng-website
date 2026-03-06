@@ -59,6 +59,8 @@
             btn.classList.remove('copied');
           }, 2000);
         }
+      }).catch(function () {
+        // Clipboard API unavailable or permission denied — silently ignore
       });
     });
   });
