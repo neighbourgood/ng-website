@@ -1,4 +1,5 @@
 // NeighbourGood Website — Main JavaScript
+// Version: 1.0.0
 // Theme toggle, copy-to-clipboard, scroll reveal, mobile nav
 
 (function () {
@@ -59,6 +60,8 @@
             btn.classList.remove('copied');
           }, 2000);
         }
+      }).catch(function () {
+        // Clipboard API unavailable or permission denied — silently ignore
       });
     });
   });
