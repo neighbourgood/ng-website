@@ -20,7 +20,7 @@
     html.setAttribute('data-theme', theme);
     localStorage.setItem('ng-theme', theme);
     if (themeIcon) {
-      themeIcon.textContent = theme === 'dark' ? '\u263E' : '\u2606';
+      themeIcon.textContent = theme === 'dark' ? '\u263E' : '\u263C';
     }
     if (themeBtn) {
       themeBtn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
