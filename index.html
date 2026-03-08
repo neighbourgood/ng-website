@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="version" content="1.0.1">
+  <meta name="version" content="1.0.0">
   <title>NeighbourGood — Community Resource Sharing &amp; Crisis Coordination</title>
   <meta name="description" content="A self-hostable, open-source platform for neighbourhood resource sharing and crisis coordination. Offline-first mesh networking for when it matters most.">
   <link rel="canonical" href="https://neighbourgood.eu">
@@ -355,32 +355,6 @@
               <span class="endpoint-label">API Docs</span>
               <span class="endpoint-value">:8300/docs</span>
             </div>
-          </div>
-        </div>
-
-        <div class="upgrade-block reveal">
-          <h3>Upgrading an existing installation?</h3>
-          <p>After pulling new code, run database migrations before restarting — otherwise the settings page and other routes will return a 500 error due to missing columns.</p>
-          <div class="terminal terminal-sm">
-            <div class="terminal-header">
-              <div class="terminal-dots" aria-hidden="true">
-                <span class="terminal-dot"></span>
-                <span class="terminal-dot"></span>
-                <span class="terminal-dot"></span>
-              </div>
-              <button class="copy-btn" data-target="upgrade-code" aria-label="Copy upgrade commands">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-                <span>Copy</span>
-              </button>
-            </div>
-            <code id="upgrade-code"><span class="comment"># Pull latest changes</span>
-<span class="prompt">$</span> git pull
-
-<span class="comment"># Apply database migrations</span>
-<span class="prompt">$</span> docker compose exec backend alembic upgrade head
-
-<span class="comment"># Rebuild and restart</span>
-<span class="prompt">$</span> docker compose up --build -d</code>
           </div>
         </div>
       </div>
