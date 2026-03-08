@@ -77,6 +77,10 @@
   color-scheme: dark;
 }
 
+:root[data-theme="dark"] .hero {
+  background: linear-gradient(180deg, #0a1628 0%, transparent 70%);
+}
+
 /* --- Reset --- */
 *, *::before, *::after {
   margin: 0;
@@ -355,7 +359,7 @@ img {
 }
 
 .hero-accent {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  background: linear-gradient(135deg, #1a6b4f, #2fb880);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
