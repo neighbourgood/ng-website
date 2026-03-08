@@ -7,6 +7,16 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.0.1] — 2026-03-08
+
+### Added
+- Upgrade guide in the Install section explaining how to run `alembic upgrade head`
+  before restarting after a `git pull`. This prevents the settings page 500 error
+  that occurs when new database columns (`telegram_chat_id`, `language_code`) are
+  missing in existing installations upgraded from versions prior to v1.6.0.
+
+---
+
 ## [1.0.0] — 2026-03-06
 
 ### Added
