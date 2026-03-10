@@ -432,6 +432,7 @@ img {
   padding: 1.25rem 1.5rem;
   text-align: left;
   position: relative;
+  width: 100%;
   max-width: 600px;
   margin: 0 auto 1rem;
   box-shadow: var(--shadow-lg);
@@ -1006,6 +1007,13 @@ img {
 }
 
 /* --- Responsive --- */
+@media (max-width: 900px) {
+  .install-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -1059,11 +1067,6 @@ img {
 
   .scenario-grid {
     grid-template-columns: 1fr;
-  }
-
-  .install-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
   }
 
   .hero-endpoints {
