@@ -182,6 +182,7 @@ img {
   justify-content: center;
   width: 34px;
   height: 34px;
+  padding: 4px;
   border-radius: var(--radius-sm);
   background: var(--color-primary);
   color: #fff;
@@ -190,8 +191,8 @@ img {
 }
 
 .brand-icon svg {
-  width: 34px;
-  height: 34px;
+  width: 26px;
+  height: 26px;
 }
 
 .brand-text {
@@ -820,7 +821,7 @@ img {
   display: grid;
   grid-template-columns: 1fr 300px;
   gap: 2rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 .install-steps {
@@ -1062,6 +1063,7 @@ img {
 
   .install-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .hero-endpoints {
