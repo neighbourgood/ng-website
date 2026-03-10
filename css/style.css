@@ -434,9 +434,11 @@ img {
   position: relative;
   width: 100%;
   max-width: 600px;
+  min-width: 0;
   margin: 0 auto 1rem;
   box-shadow: var(--shadow-lg);
   overflow-x: auto;
+  box-sizing: border-box;
 }
 
 .terminal-header {
@@ -823,6 +825,10 @@ img {
   grid-template-columns: 1fr 300px;
   gap: 2rem;
   align-items: stretch;
+}
+
+.install-grid > * {
+  min-width: 0;
 }
 
 .install-steps {
