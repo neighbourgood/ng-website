@@ -218,44 +218,43 @@
           <p>Real screens from a running NeighbourGood instance.</p>
         </div>
 
-        <div class="screenshot-grid">
-          <div class="screenshot-card reveal">
-            <div class="screenshot-frame">
-              <div class="terminal-dots" aria-hidden="true">
-                <span class="terminal-dot"></span>
-                <span class="terminal-dot"></span>
-                <span class="terminal-dot"></span>
-              </div>
-              <img src="images/screenshot-communities.png" alt="NeighbourGood Communities page showing a map of nearby neighbourhoods and the user's joined community" loading="lazy" width="1100" height="800">
+        <div class="slideshow reveal" data-slideshow>
+          <div class="slideshow-frame">
+            <div class="terminal-dots" aria-hidden="true">
+              <span class="terminal-dot"></span>
+              <span class="terminal-dot"></span>
+              <span class="terminal-dot"></span>
             </div>
-            <h3>Find Your Community</h3>
-            <p>Discover neighbourhoods on the map, join with an invite code, and see who's already sharing nearby.</p>
+            <div class="slideshow-viewport">
+              <div class="slideshow-track">
+                <div class="slideshow-slide" data-title="Find Your Community" data-desc="Discover neighbourhoods on the map, join with an invite code, and see who's already sharing nearby.">
+                  <img src="images/screenshot-communities.png" alt="NeighbourGood Communities page showing a map of nearby neighbourhoods and the user's joined community" loading="lazy" width="880" height="640">
+                </div>
+                <div class="slideshow-slide" data-title="Share What You Have" data-desc="Browse and list tools, clothing, food, and more &mdash; searchable by category so neighbours find exactly what they need.">
+                  <img src="images/screenshot-resources.png" alt="NeighbourGood Shared Resources page listing items neighbours have offered to lend, such as a winter jacket, blender, and drill" loading="lazy" width="880" height="640">
+                </div>
+                <div class="slideshow-slide" data-title="High-End Integrations" data-desc="Link Telegram for instant alerts, enable Bluetooth mesh networking for offline crisis chat, or wire up signed webhooks to Slack and Discord.">
+                  <img src="images/screenshot-settings.png" alt="NeighbourGood Settings page with Telegram notification linking and BLE mesh networking options" loading="lazy" width="880" height="640">
+                </div>
+              </div>
+            </div>
+            <button type="button" class="slideshow-arrow slideshow-prev" aria-label="Previous screenshot">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button type="button" class="slideshow-arrow slideshow-next" aria-label="Next screenshot">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
           </div>
 
-          <div class="screenshot-card reveal">
-            <div class="screenshot-frame">
-              <div class="terminal-dots" aria-hidden="true">
-                <span class="terminal-dot"></span>
-                <span class="terminal-dot"></span>
-                <span class="terminal-dot"></span>
-              </div>
-              <img src="images/screenshot-resources.png" alt="NeighbourGood Shared Resources page listing items neighbours have offered to lend, such as a winter jacket, blender, and drill" loading="lazy" width="1100" height="800">
-            </div>
-            <h3>Share What You Have</h3>
-            <p>Browse and list tools, clothing, food, and more &mdash; searchable by category so neighbours find exactly what they need.</p>
+          <div class="slideshow-caption">
+            <h3 data-slide-title>Find Your Community</h3>
+            <p data-slide-desc>Discover neighbourhoods on the map, join with an invite code, and see who's already sharing nearby.</p>
           </div>
 
-          <div class="screenshot-card reveal">
-            <div class="screenshot-frame">
-              <div class="terminal-dots" aria-hidden="true">
-                <span class="terminal-dot"></span>
-                <span class="terminal-dot"></span>
-                <span class="terminal-dot"></span>
-              </div>
-              <img src="images/screenshot-settings.png" alt="NeighbourGood Settings page with Telegram notification linking and BLE mesh networking options" loading="lazy" width="1100" height="800">
-            </div>
-            <h3>High-End Integrations</h3>
-            <p>Link Telegram for instant alerts, enable Bluetooth mesh networking for offline crisis chat, or wire up signed webhooks to Slack and Discord.</p>
+          <div class="slideshow-dots" role="tablist" aria-label="Screenshot slides">
+            <button type="button" class="slideshow-dot" role="tab" aria-label="Show Communities screenshot" data-slide-index="0"></button>
+            <button type="button" class="slideshow-dot" role="tab" aria-label="Show Shared Resources screenshot" data-slide-index="1"></button>
+            <button type="button" class="slideshow-dot" role="tab" aria-label="Show Settings screenshot" data-slide-index="2"></button>
           </div>
         </div>
       </div>

@@ -717,47 +717,119 @@ img {
   color: var(--color-primary);
 }
 
-/* --- Screenshot Grid --- */
-.screenshot-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+/* --- Screenshot Slideshow --- */
+.slideshow {
+  max-width: 460px;
+  margin: 0 auto;
 }
 
-.screenshot-card {
-  text-align: left;
-}
-
-.screenshot-frame {
+.slideshow-frame {
+  position: relative;
   background: var(--color-terminal-bg);
   border-radius: var(--radius);
   padding: 0.6rem 0.6rem 0;
   box-shadow: var(--shadow-lg);
-  overflow: hidden;
-  margin-bottom: 1rem;
 }
 
-.screenshot-frame .terminal-dots {
+.slideshow-frame .terminal-dots {
   padding: 0 0.4rem 0.6rem;
 }
 
-.screenshot-frame img {
-  width: 100%;
+.slideshow-viewport {
+  overflow: hidden;
   border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+}
+
+.slideshow-track {
+  display: flex;
+  transition: transform var(--transition-slow);
+}
+
+.slideshow-slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+.slideshow-slide img {
+  width: 100%;
   display: block;
 }
 
-.screenshot-card h3 {
+.slideshow-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.slideshow-arrow:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.slideshow-prev {
+  left: 0.6rem;
+}
+
+.slideshow-next {
+  right: 0.6rem;
+}
+
+.slideshow-caption {
+  text-align: center;
+  margin-top: 1.25rem;
+  min-height: 5.5rem;
+}
+
+.slideshow-caption h3 {
   font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.4rem;
 }
 
-.screenshot-card p {
+.slideshow-caption p {
   font-size: 0.88rem;
   color: var(--color-text-muted);
   line-height: 1.6;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.slideshow-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.slideshow-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-border);
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.slideshow-dot:hover {
+  background: var(--color-border-hover);
+}
+
+.slideshow-dot.is-active {
+  background: var(--color-primary);
+  transform: scale(1.35);
 }
 
 /* --- Scenario Grid --- */
@@ -1129,8 +1201,8 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .screenshot-grid {
-    grid-template-columns: 1fr;
+  .slideshow {
+    max-width: 340px;
   }
 
   .hero-endpoints {
