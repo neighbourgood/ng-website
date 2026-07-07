@@ -102,6 +102,71 @@
     }, { passive: true });
   }
 
+  // --- Screenshot Slideshow ---
+  document.querySelectorAll('[data-slideshow]').forEach(function (slideshow) {
+    var track = slideshow.querySelector('.slideshow-track');
+    var slides = Array.prototype.slice.call(slideshow.querySelectorAll('.slideshow-slide'));
+    var dots = Array.prototype.slice.call(slideshow.querySelectorAll('.slideshow-dot'));
+    var titleEl = slideshow.querySelector('[data-slide-title]');
+    var descEl = slideshow.querySelector('[data-slide-desc]');
+    var prevBtn = slideshow.querySelector('.slideshow-prev');
+    var nextBtn = slideshow.querySelector('.slideshow-next');
+    var index = 0;
+    var autoplayDelay = 5000;
+    var autoplayTimer = null;
+
+    function render() {
+      track.style.transform = 'translateX(-' + (index * 100) + '%)';
+      dots.forEach(function (dot, i) {
+        dot.classList.toggle('is-active', i === index);
+      });
+      var slide = slides[index];
+      if (slide && titleEl && descEl) {
+        titleEl.textContent = slide.getAttribute('data-title');
+        descEl.innerHTML = slide.getAttribute('data-desc');
+      }
+    }
+
+    function goTo(i) {
+      index = (i + slides.length) % slides.length;
+      render();
+    }
+
+    function restartAutoplay() {
+      if (autoplayTimer) clearTimeout(autoplayTimer);
+      autoplayTimer = setTimeout(function () {
+        goTo(index + 1);
+        restartAutoplay();
+      }, autoplayDelay);
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function () {
+        goTo(index - 1);
+        restartAutoplay();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function () {
+        goTo(index + 1);
+        restartAutoplay();
+      });
+    }
+
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () {
+        goTo(i);
+        restartAutoplay();
+      });
+    });
+
+    if (slides.length > 1) {
+      render();
+      restartAutoplay();
+    }
+  });
+
   // --- Mobile Hamburger Menu ---
   var hamburger = document.querySelector('.hamburger');
   var navLinks = document.querySelector('.nav-links');
