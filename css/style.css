@@ -717,6 +717,49 @@ img {
   color: var(--color-primary);
 }
 
+/* --- Screenshot Grid --- */
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.screenshot-card {
+  text-align: left;
+}
+
+.screenshot-frame {
+  background: var(--color-terminal-bg);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.6rem 0;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.screenshot-frame .terminal-dots {
+  padding: 0 0.4rem 0.6rem;
+}
+
+.screenshot-frame img {
+  width: 100%;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  display: block;
+}
+
+.screenshot-card h3 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.screenshot-card p {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
 /* --- Scenario Grid --- */
 .scenario-grid {
   display: grid;
@@ -1083,6 +1126,10 @@ img {
   }
 
   .scenario-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshot-grid {
     grid-template-columns: 1fr;
   }
 
