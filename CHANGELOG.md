@@ -7,6 +7,39 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.2.0] — 2026-07-08
+
+### Added
+- **Animated mesh-network hero** — a canvas of drifting nodes (with terracotta
+  "hub" nodes for the neighbourhood Pi) linked by proximity lines, with glowing
+  message pulses that hop node-to-node through the mesh. Theme-aware, pauses
+  when off-screen or the tab is hidden, and fully disabled under
+  `prefers-reduced-motion`.
+- **Terminal boot-up animation** — the hero install commands reveal line by
+  line with a blinking block caret, like output scrolling in. Copy-to-clipboard
+  still yields the clean, complete command list.
+- **3D tilt on the screenshot slideshow** — the frame subtly rotates toward the
+  cursor (fine-pointer devices only, reduced-motion aware).
+- Display serif **Fraunces** for headings (Georgia fallback), including the
+  italic hero accent line.
+
+### Changed
+- Hero redesigned from a centered stack into an asymmetric editorial split:
+  oversized three-line headline with italic accent on the left, live terminal
+  and endpoint list on the right; the pill badge is now a small mono eyebrow.
+- Screenshot slideshow enlarged from 460px to 880px (native screenshot width)
+  and reframed: the macOS traffic-light dots are gone, replaced by a clean
+  browser chrome with a padlock address pill; arrows fade in on hover.
+- Terminal blocks lose their traffic-light dots too, gaining a
+  `neighbour@pi:~` title bar with a hairline rule instead.
+- Section headers are left-aligned with a mono, rule-prefixed kicker label in
+  the terracotta accent.
+- Sticky nav is now translucent with backdrop blur and gains a shadow once
+  scrolled; feature/scenario cards lift slightly on hover.
+- Bumped the stylesheet cache-busting query to `style.css?v=5`.
+
+---
+
 ## [1.1.0] — 2026-06-19
 
 ### Changed
