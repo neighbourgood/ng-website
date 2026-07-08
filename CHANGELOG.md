@@ -7,6 +7,29 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.2.1] — 2026-07-08
+
+### Fixed
+- **Mobile horizontal overflow in the hero** — the hero grid items lacked
+  `min-width: 0`, so the terminal's unbreakable `git clone …` line set the
+  single-column grid's minimum width and pushed the whole hero wider than
+  the phone screen, cutting off both the subtitle text and the install
+  commands. The column now shrinks to the viewport and long command lines
+  scroll horizontally inside the terminal instead (copy still yields the
+  full commands).
+- **Cramped mobile nav** — the "Get Started" button wrapped onto two lines
+  and the wordmark sat flush against the hamburger. The button no longer
+  wraps and is more compact on small screens, the nav uses tighter mobile
+  padding, and the hamburger moves to the far right with the brand pushed
+  left (theme toggle and CTA grouped beside the hamburger).
+- The 640px terminal font-size reduction now actually applies — it targeted
+  `.terminal`, but the commands' size is set on `.terminal code`. Hero
+  buttons also go full-width on very small screens instead of centring at
+  intrinsic width.
+- Bumped the stylesheet cache-busting query to `style.css?v=6`.
+
+---
+
 ## [1.2.0] — 2026-07-08
 
 ### Added
