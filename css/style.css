@@ -1206,21 +1206,68 @@ img {
   color: var(--color-text-subtle);
 }
 
-.footer-more {
-  font-size: 0.75rem;
-  color: var(--color-text-subtle);
-  margin-top: 0.75rem;
+/* --- Related projects (maintainer) --- */
+.related-projects {
+  border-top: 1px solid var(--color-border);
+  padding: 2.5rem 1.5rem 0.5rem;
 }
 
-.footer-more a {
+.related-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.related-label {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--color-text-subtle);
-  text-decoration: underline;
-  text-decoration-color: var(--color-border);
+  margin-bottom: 1.1rem;
+}
+
+.related-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.related-list li {
+  flex: 1 1 260px;
+  max-width: 340px;
+  text-align: left;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  transition: border-color var(--transition-fast);
+}
+
+.related-list li:hover {
+  border-color: var(--color-border-hover);
+}
+
+.related-list a {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
   transition: color var(--transition-fast);
 }
 
-.footer-more a:hover {
+.related-list a:hover {
   color: var(--color-primary);
+}
+
+.related-list span {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--color-text-muted);
 }
 
 /* --- Animations --- */
