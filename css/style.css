@@ -1209,7 +1209,7 @@ img {
 /* --- Related projects (maintainer) --- */
 .related-projects {
   border-top: 1px solid var(--color-border);
-  padding: 3.5rem 1.5rem 1rem;
+  padding: 3rem 1.5rem;
 }
 
 .related-inner {
@@ -1239,18 +1239,32 @@ img {
 .related-list li {
   flex: 1 1 260px;
   max-width: 340px;
+  display: flex;
+}
+
+.related-card {
+  display: block;
+  width: 100%;
   text-align: left;
-  padding: 0.85rem 1rem;
+  padding: 0.95rem 1.1rem;
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
-  transition: border-color var(--transition-fast);
+  background: var(--color-surface);
+  text-decoration: none;
+  transition: border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.related-list li:hover {
-  border-color: var(--color-border-hover);
+.related-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
 }
 
-.related-list a {
+.related-name {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
   font-family: var(--font-body);
   font-size: 0.9rem;
   font-weight: 600;
@@ -1258,13 +1272,23 @@ img {
   transition: color var(--transition-fast);
 }
 
-.related-list a:hover {
+.related-name svg {
+  color: var(--color-text-subtle);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.related-card:hover .related-name {
   color: var(--color-primary);
 }
 
-.related-list span {
+.related-card:hover .related-name svg {
+  color: var(--color-primary);
+  transform: translate(1px, -1px);
+}
+
+.related-desc {
   display: block;
-  margin-top: 0.25rem;
+  margin-top: 0.3rem;
   font-size: 0.8rem;
   line-height: 1.45;
   color: var(--color-text-muted);
