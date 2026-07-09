@@ -1141,6 +1141,95 @@ img {
   border-radius: var(--radius-sm);
 }
 
+/* --- System Requirements --- */
+.sysreq {
+  margin-top: 3rem;
+}
+
+.sysreq-header {
+  margin-bottom: 1.25rem;
+}
+
+.sysreq-header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  margin-bottom: 0.4rem;
+}
+
+.sysreq-header p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  max-width: 62ch;
+}
+
+.sysreq-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  box-shadow: var(--shadow);
+}
+
+.sysreq-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  min-width: 480px;
+}
+
+.sysreq-table th,
+.sysreq-table td {
+  text-align: left;
+  padding: 0.7rem 1.1rem;
+  white-space: nowrap;
+}
+
+.sysreq-table thead th {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-subtle);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface-raised);
+}
+
+.sysreq-table tbody tr + tr th,
+.sysreq-table tbody tr + tr td {
+  border-top: 1px solid var(--color-border);
+}
+
+.sysreq-table tbody th[scope="row"] {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.sysreq-table tbody td {
+  color: var(--color-text-muted);
+}
+
+/* subtle emphasis on the "Recommended" column */
+.sysreq-table thead th:last-child,
+.sysreq-table tbody td:last-child {
+  background: var(--color-primary-light);
+}
+
+.sysreq-table tbody td:last-child {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.sysreq-note {
+  margin-top: 1rem;
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+}
+
+.sysreq-note strong {
+  color: var(--color-text);
+}
+
 /* --- Footer --- */
 .site-footer {
   border-top: 1px solid var(--color-border);

@@ -30,7 +30,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css?v=9">
+  <link rel="stylesheet" href="css/style.css?v=10">
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to content</a>
@@ -408,6 +408,36 @@
               <span class="endpoint-value">:8300/docs</span>
             </div>
           </div>
+        </div>
+
+        <div class="sysreq reveal">
+          <div class="sysreq-header">
+            <h3>System requirements</h3>
+            <p>Minimum specs for a VPS or self-hosted box. PostgreSQL runs inside Docker — no separate database server needed.</p>
+          </div>
+          <div class="sysreq-table-wrap">
+            <table class="sysreq-table">
+              <thead>
+                <tr>
+                  <th scope="col">Resource</th>
+                  <th scope="col">Minimum</th>
+                  <th scope="col">Recommended</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">CPU</th><td>1 vCPU</td><td>2 vCPU</td></tr>
+                <tr><th scope="row">RAM</th><td>512 MB</td><td>1 GB</td></tr>
+                <tr><th scope="row">Disk</th><td>5 GB</td><td>20 GB</td></tr>
+                <tr><th scope="row">OS</th><td>Linux (any modern distro)</td><td>Ubuntu 22.04 LTS</td></tr>
+                <tr><th scope="row">Docker</th><td>24+</td><td>latest</td></tr>
+                <tr><th scope="row">Docker Compose</th><td>v2 plugin</td><td>latest</td></tr>
+                <tr><th scope="row">Open ports</th><td>80, 443 (or 3800/8300 direct)</td><td>+ 22 for SSH</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="sysreq-note">
+            A <strong>$5–6/month VPS</strong> (e.g. Hetzner CX11, DigitalOcean Basic) is enough for a small community of under 200 users.
+          </p>
         </div>
       </div>
     </section>
