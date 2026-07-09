@@ -282,7 +282,7 @@
       if (!running) return;
       requestAnimationFrame(frame);
 
-      var dt = lastFrame ? Math.min(now - lastFrame, 50) : 16;
+      var dt = lastFrame ? Math.min(now - lastFrame, 34) : 16;
       lastFrame = now;
       ctx.clearRect(0, 0, W, H);
 
@@ -291,8 +291,8 @@
       // drift
       for (i = 0; i < nodes.length; i++) {
         n = nodes[i];
-        n.x += n.vx * dt * 0.06;
-        n.y += n.vy * dt * 0.06;
+        n.x += n.vx * dt * 0.048;
+        n.y += n.vy * dt * 0.048;
         if (n.x < -20) n.x = W + 20;
         if (n.x > W + 20) n.x = -20;
         if (n.y < -20) n.y = H + 20;
@@ -337,7 +337,7 @@
         var p = pulses[i];
         var a = nodes[p.path[p.seg]];
         var b = nodes[p.path[p.seg + 1]];
-        p.t += dt / 700;
+        p.t += dt / 850;
         if (p.t >= 1) {
           p.t = 0;
           p.seg++;
