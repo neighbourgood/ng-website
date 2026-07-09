@@ -1206,6 +1206,23 @@ img {
   color: var(--color-text-subtle);
 }
 
+.footer-more {
+  font-size: 0.75rem;
+  color: var(--color-text-subtle);
+  margin-top: 0.75rem;
+}
+
+.footer-more a {
+  color: var(--color-text-subtle);
+  text-decoration: underline;
+  text-decoration-color: var(--color-border);
+  transition: color var(--transition-fast);
+}
+
+.footer-more a:hover {
+  color: var(--color-primary);
+}
+
 /* --- Animations --- */
 @keyframes fadeIn {
   from { opacity: 0; }
