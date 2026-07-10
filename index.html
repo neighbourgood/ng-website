@@ -63,7 +63,7 @@
         <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
           <span class="theme-icon" aria-hidden="true">&#9788;</span>
         </button>
-        <a href="#install" class="nav-btn-primary">
+        <a href="#install-block" class="nav-btn-primary">
           Get Started
         </a>
       </div>
@@ -83,7 +83,7 @@
           <div class="hero-buttons">
             <a href="#install" class="btn-hero">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
-              Quick Install
+              Manual Install
             </a>
             <a href="https://github.com/neighbourgood/neighbourgood" class="btn-hero-secondary" target="_blank" rel="noopener">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -97,17 +97,14 @@
           <div class="terminal" id="install-block">
             <div class="terminal-header">
               <span class="terminal-title" aria-hidden="true">neighbour@pi:~</span>
-              <button class="copy-btn" data-target="install-code" aria-label="Copy install commands">
+              <button class="copy-btn" data-target="install-code" aria-label="Copy install command">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
                 <span>Copy</span>
               </button>
             </div>
-            <code id="install-code" data-typewriter><span class="prompt">$</span> git clone https://github.com/neighbourgood/neighbourgood.git
-<span class="prompt">$</span> cd neighbourgood
-<span class="prompt">$</span> cp .env.example .env
-<span class="prompt">$</span> echo "NG_SECRET_KEY=$(openssl rand -hex 32)" >> .env
-<span class="prompt">$</span> docker compose up --build</code>
+            <code id="install-code" class="wrap" data-typewriter><span class="prompt">$</span> curl -fsSL https://raw.githubusercontent.com/neighbourgood/neighbourgood/main/install.sh | bash</code>
           </div>
+          <p class="hero-install-note">No Docker or git required &mdash; the script detects what's installed and falls back automatically. Prefer to do it by hand? <a href="#install">See manual install</a>.</p>
 
           <div class="hero-endpoints">
             <div class="hero-endpoint">
@@ -351,7 +348,7 @@
             BLE Mesh
           </span>
         </div>
-        <p>Self-host on any machine with Docker. Raspberry Pi to cloud server. Your data stays with your community.</p>
+        <p>Self-host on any machine — Raspberry Pi to cloud server, with or without Docker. Your data stays with your community.</p>
       </div>
     </div>
 
@@ -360,8 +357,8 @@
       <div class="section-inner">
         <div class="section-header reveal">
           <span class="section-label">Get Started</span>
-          <h2>Up and running in 60 seconds</h2>
-          <p>All you need is Docker and Docker Compose.</p>
+          <h2>Prefer to install it yourself?</h2>
+          <p>The one-line install above works without Docker or git. If you'd rather clone the repo and run Docker Compose by hand, here's how.</p>
         </div>
 
         <div class="install-grid reveal">
