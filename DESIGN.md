@@ -28,7 +28,7 @@ concrete rules that fall out of that:
    emotional phrase (e.g. *Help each other.*).
 
 4. **Mono kickers instead of pill badges.** Small uppercase mono labels with a
-   short rule prefix (`—— FEATURES`) replace rounded badge pills. Terracotta,
+   short rule prefix (`—— FEATURES`) replace rounded badge pills. Warm brown,
    letterspaced, quiet.
 
 5. **Motion must mean something.** Every animation maps to a product truth:
@@ -66,7 +66,7 @@ concrete rules that fall out of that:
 - **Accent voice:** italic Fraunces in `--color-primary`
   (`.hero-accent { font-style: italic }`). One phrase per page, max.
 - **Kicker/label style:** mono, 0.7–0.72rem, uppercase, letter-spacing
-  0.12–0.14em, `--color-accent` (terracotta). Kickers get a `::before` rule:
+  0.12–0.14em, `--color-accent` (warm brown). Kickers get a `::before` rule:
   2rem wide, 1px tall, same color.
 
 ---
@@ -86,12 +86,13 @@ properties — never hardcode a hex in a component.
 | `--color-surface-raised` | `#fef9f5` | alternating sections |
 | `--color-text` | `#2d1b0e` | warm near-black |
 | `--color-text-muted` | `#7a5c47` | body copy |
-| `--color-text-subtle` | `#b89078` | labels, footer |
-| `--color-primary` | `#4f46e5` | violet — links, buttons, Blue Sky |
+| `--color-text-subtle` | `#8f6a52` | labels, footer, secondary meta (4.6:1 on bg) |
+| `--color-primary` | `#4f46e5` | violet — links, buttons, logo tile, Blue Sky |
 | `--color-primary-hover` | `#4338ca` | |
 | `--color-primary-light` | `#eef2ff` | tint backgrounds |
-| `--color-accent` | `#c95d1b` | terracotta — brand, kickers, hubs |
-| `--color-accent-light` | `#fef0e4` | |
+| `--color-accent` | `#7a5c47` | warm brown — kickers, mesh hubs, small labels (was terracotta until v1.3.0) |
+| `--color-accent-light` | `#f3e7da` | |
+| `--color-on-primary` | `#ffffff` | house glyph on the logo tile |
 | `--color-border` | `#e8d5c2` | warm hairlines |
 | `--color-error` | `#dc2626` | Red Sky / crisis |
 | `--color-surface-translucent` | `rgba(255,255,255,0.82)` | blurred nav |
@@ -106,7 +107,8 @@ properties — never hardcode a hex in a component.
 | `--color-text` | `#e8e8ed` |
 | `--color-text-muted` | `#9ca3af` |
 | `--color-primary` | `#818cf8` (lightened for contrast) |
-| `--color-accent` | `#e07b33` |
+| `--color-accent` | `#c9b8a6` |
+| `--color-on-primary` | `#0f0f1a` |
 | `--color-border` | `#2d2d44` |
 | `--color-error` | `#f87171` |
 | `--color-surface-translucent` | `rgba(26,26,46,0.82)` |
@@ -117,8 +119,17 @@ Catppuccin-ish, intentionally theme-invariant so terminals read as "a real
 dark terminal" even in light mode: bg `#1e1e2e`, text `#cdd6f4`, prompt
 `#a6e3a1` (green `$`), comment `#6c7086`.
 
-**Semantic pairing:** violet = everyday / "Blue Sky" mode; red = crisis /
-"Red Sky" mode; terracotta = the brand itself (logo, kickers, mesh hubs).
+**Semantic pairing:** violet = everyday / "Blue Sky" mode and the logo; red =
+crisis / "Red Sky" mode; warm brown = quiet structure (kickers, mesh hubs).
+There is no orange in the palette since v1.3.0.
+
+**Logo (v1.3.0):** a violet rounded tile (`--color-primary`, radius 8/32) with a
+house whose door is an arch, filled in `--color-on-primary`. The wordmark is
+Fraunces "Neighbour" + violet "Good". Source: `images/logo.svg`,
+`images/favicon.svg`.
+
+**Secondary actions** are text-weight: no fill, no border, muted text that
+darkens on hover. Only one filled button per area.
 Keep this mapping when porting to the app.
 
 ---
@@ -153,7 +164,7 @@ Keep this mapping when porting to the app.
 - **Cards:** surface bg, 1px border, radius; hover = border tints primary,
   `translateY(-3px)`, `--shadow-md`. Feature cards carry a serif
   `counter(feature, decimal-leading-zero)` index and a small color-coded
-  corner icon (violet = everyday, red = crisis, terracotta = brand/infra).
+  corner icon (violet = everyday, red = crisis, brown = infra).
 
 ---
 
@@ -187,7 +198,7 @@ nodes, proximity links, and messages relaying hop-by-hop through the mesh.
 **Setup**
 - DPR-aware: canvas backing store scaled by `min(devicePixelRatio, 2)`.
 - Node count is density-based: `clamp(16, W·H / 26000, 40)`.
-- Every **9th node is a "hub"** — slightly larger, drawn in terracotta
+- Every **9th node is a "hub"** — slightly larger, drawn in warm brown
   (`--color-accent`) at 0.75 alpha. Hubs represent the neighbourhood
   Raspberry Pi. Regular nodes: radius 1.6–3px, primary color, 0.4 alpha.
 - Colors are **read from the CSS custom properties** at init and re-read via a
@@ -278,6 +289,6 @@ enough when JS sets inline styles or animation delays.
   `js/main.js`) and can be extracted as-is; it only needs an absolutely
   positioned canvas over a container and the two CSS custom properties.
 - Keep the semantic color mapping (violet = Blue Sky, red = Red Sky,
-  terracotta = brand) consistent with the app's existing modes.
+  violet logo, brown = quiet structure) consistent with the app's existing modes.
 - Respect the copy-integrity trick (§6.3) anywhere animated code blocks have a
   copy button.
