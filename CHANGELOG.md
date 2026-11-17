@@ -7,6 +7,37 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.3.0] — 2026-11-17
+
+Redesign "A · Evolve": the same look, with tighter rules and no orange.
+
+### Changed
+- **New logo.** The house mark is redrawn as a violet tile with an arched door
+  (instead of a dot), so it stays readable at favicon size. The violet matches
+  the buttons, so brand colour and action colour now agree. `images/logo.svg`,
+  `images/favicon.svg`, and the nav and footer marks are updated. "Good" in the
+  wordmark is violet too.
+- **No more orange.** `--color-accent` (kickers, mesh hubs, small labels) is now
+  a warm brown (`#7a5c47` light, `#c9b8a6` dark) instead of terracotta.
+- **Calmer type and colour.** `--color-text-subtle` now has readable contrast
+  (`#8f6a52` light, `#8b93a1` dark). The hero subtitle, section intros and the
+  hero install note are slightly smaller. "View on GitHub" is now a quiet
+  text-style button, so the install button is the only filled action in the hero.
+- **Install section.** It is now titled "Run NeighbourGood on your own server",
+  starts with three quick steps (one-line installer, open the app, create your
+  community) and keeps the manual Docker Compose path below them. The
+  requirements note mentions running at home on an old laptop, a mini PC or a
+  Raspberry Pi, and the higher needs of local AI features.
+- The primary hero button now reads "Install NeighbourGood", and terminal titles
+  read `neighbour@server:~`, so the site no longer suggests it is only for a
+  Raspberry Pi.
+
+### Added
+- A **Blue Sky / Red Sky strip** directly under the hero, naming both modes.
+- A **row of four top features** under it: lend and borrow, swap skills, meet up,
+  ready for a crisis.
+- Bumped the stylesheet cache-busting query to `style.css?v=11`.
+
 ## [1.2.1] — 2026-07-08
 
 ### Fixed

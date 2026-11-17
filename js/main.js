@@ -214,12 +214,12 @@
     var running = true;
     var lastSpawn = 0;
     var lastFrame = 0;
-    var colors = { line: '#4f46e5', node: '#4f46e5', hub: '#c95d1b', pulse: '#4f46e5' };
+    var colors = { line: '#4f46e5', node: '#4f46e5', hub: '#7a5c47', pulse: '#4f46e5' };
 
     function readColors() {
       var styles = getComputedStyle(document.documentElement);
       var primary = styles.getPropertyValue('--color-primary').trim() || '#4f46e5';
-      var accent = styles.getPropertyValue('--color-accent').trim() || '#c95d1b';
+      var accent = styles.getPropertyValue('--color-accent').trim() || '#7a5c47';
       colors = { line: primary, node: primary, hub: accent, pulse: primary };
     }
 
