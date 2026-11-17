@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="version" content="1.3.2">
+  <meta name="version" content="1.3.3">
   <title>NeighbourGood — Community Resource Sharing &amp; Crisis Coordination</title>
   <meta name="description" content="A self-hostable, open-source platform for neighbourhood resource sharing and crisis coordination. Offline-first mesh networking for when it matters most.">
   <link rel="canonical" href="https://neighbourgood.eu">
@@ -478,7 +478,7 @@
               </thead>
               <tbody>
                 <tr><th scope="row">CPU</th><td>1 vCPU</td><td>2 vCPU</td></tr>
-                <tr><th scope="row">RAM</th><td>512 MB</td><td>1 GB</td></tr>
+                <tr><th scope="row">RAM</th><td>1 GB</td><td>2 GB</td></tr>
                 <tr><th scope="row">Disk</th><td>5 GB</td><td>20 GB</td></tr>
                 <tr><th scope="row">OS</th><td>Linux (any modern distro)</td><td>Ubuntu 22.04 LTS</td></tr>
                 <tr><th scope="row">Docker</th><td>24+</td><td>latest</td></tr>
@@ -488,8 +488,9 @@
             </table>
           </div>
           <p class="sysreq-note">
-            A <strong>$5–6/month VPS</strong> (e.g. Hetzner CX11, DigitalOcean Basic) is enough for a small community of under 200 users.
+            A <strong>5&nbsp;€/month VPS</strong> (e.g. Hetzner, DigitalOcean Basic) is plenty for a neighbourhood, and can host several neighbourhoods side by side.
             At home, an old laptop, a mini PC or a Raspberry Pi can do the same job.
+            On a 1&nbsp;GB server, add 1–2&nbsp;GB of swap before installing: the app is built on the server during install and updates, and that step needs about 1&nbsp;GB on its own.
           </p>
           <p class="sysreq-note">
             Local AI features (smart matching, the Telegram assistant) need more: 4+ CPU cores and 8&nbsp;GB of RAM. Without them, everything else still works.

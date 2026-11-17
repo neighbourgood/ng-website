@@ -7,6 +7,16 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.3.3] — 2026-11-17
+
+### Changed
+- **Honest server sizing** in System requirements: a 5 € server is now
+  described as plenty for a neighbourhood (and several side by side), since
+  most neighbourhoods are well under 200 people. Minimum RAM raised from
+  512 MB to 1 GB, with a note to add swap on 1 GB servers because the build
+  during install and update needs about 1 GB on its own. The retired
+  Hetzner CX11 name is dropped.
+
 ## [1.3.2] — 2026-11-17
 
 ### Changed
