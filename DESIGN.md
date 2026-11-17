@@ -176,6 +176,9 @@ Keep this mapping when porting to the app.
 - Screenshots are shown at **native resolution** (880px wide) — never scale a
   screenshot down to thumbnail size; if it can't be read, it shouldn't be
   there.
+- Each screenshot exists twice, `screenshot-<page>.png` and
+  `screenshot-<page>-dark.png` (2× scale, 1760×1280); `.shot-light` / `.shot-dark`
+  switch with `data-theme`, so the slideshow matches the theme toggle.
 
 ---
 

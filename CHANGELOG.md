@@ -7,6 +7,19 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.3.2] — 2026-11-17
+
+### Changed
+- **New app screenshots** in the "A look inside the app" slideshow, taken from
+  NeighbourGood 2.8 with sample data: Communities (map of Berlin and your
+  community card), Shared Resources (the new expandable cards, one opened) and
+  Settings (Telegram, Bluetooth mesh and webhooks). They are 2× sharp
+  (1760×1280, shown at 880×640).
+- **Screenshots follow the site theme** — each slide has a light and a dark
+  image; the dark one shows when the theme toggle (or the system setting on
+  first visit) is dark.
+- Bumped the stylesheet cache-busting query to `style.css?v=13`.
+
 ## [1.3.1] — 2026-11-17
 
 ### Changed
