@@ -7,6 +7,15 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.3.1] — 2026-11-17
+
+### Changed
+- **No amber left** — `--color-warning` is now warm brown, matching the app
+  (v2.7.0): `#6b4a33` on `#f3e7da` in light mode, `#d4bc9f` on `#2e241b` in
+  dark mode. The old amber values (`#d97706`, `#fbbf24`, `#451a03`) are gone
+  from the stylesheet.
+- Bumped the stylesheet cache-busting query to `style.css?v=12`.
+
 ## [1.3.0] — 2026-11-17
 
 Redesign "A · Evolve": the same look, with tighter rules and no orange.

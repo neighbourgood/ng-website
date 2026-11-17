@@ -95,6 +95,7 @@ properties — never hardcode a hex in a component.
 | `--color-on-primary` | `#ffffff` | house glyph on the logo tile |
 | `--color-border` | `#e8d5c2` | warm hairlines |
 | `--color-error` | `#dc2626` | Red Sky / crisis |
+| `--color-warning` | `#6b4a33` on `#f3e7da` | warm brown, never amber (dark: `#d4bc9f` on `#2e241b`) |
 | `--color-surface-translucent` | `rgba(255,255,255,0.82)` | blurred nav |
 
 ### Dark
