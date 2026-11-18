@@ -7,6 +7,15 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.4.0] — 2026-11-18
+
+### Changed
+- **Install snippet uses the ready-made Docker images** (NeighbourGood 2.9):
+  `docker compose up -d` instead of `docker compose up --build`, and the
+  System requirements note says images exist for amd64 and arm64 instead of
+  asking for swap before installing, since nothing is built on the server
+  any more.
+
 ## [1.3.3] — 2026-11-17
 
 ### Changed
