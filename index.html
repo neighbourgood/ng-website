@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="version" content="1.4.0">
+  <meta name="version" content="1.4.1">
   <title>NeighbourGood — Community Resource Sharing &amp; Crisis Coordination</title>
   <meta name="description" content="A self-hostable, open-source platform for neighbourhood resource sharing and crisis coordination. Offline-first mesh networking for when it matters most.">
   <link rel="canonical" href="https://neighbourgood.eu">
@@ -397,8 +397,8 @@
 <span class="prompt">$</span> cp .env.example .env
 <span class="prompt">$</span> echo "NG_SECRET_KEY=$(openssl rand -hex 32)" >> .env
 
-<span class="comment"># Launch</span>
-<span class="prompt">$</span> docker compose up --build</code>
+<span class="comment"># Download the ready-made images and launch</span>
+<span class="prompt">$</span> docker compose up -d</code>
             </div>
 
             <p class="install-note">
@@ -453,7 +453,7 @@
           <p class="sysreq-note">
             A <strong>5&nbsp;€/month VPS</strong> (e.g. Hetzner, DigitalOcean Basic) is plenty for a neighbourhood, and can host several neighbourhoods side by side.
             At home, an old laptop, a mini PC or a Raspberry Pi can do the same job.
-            On a 1&nbsp;GB server, add 1–2&nbsp;GB of swap before installing: the app is built on the server during install and updates, and that step needs about 1&nbsp;GB on its own.
+            NeighbourGood comes as ready-made images for amd64 and arm64, so nothing is built on your server.
           </p>
           <p class="sysreq-note">
             Local AI features (smart matching, the Telegram assistant) need more: 4+ CPU cores and 8&nbsp;GB of RAM. Without them, everything else still works.
