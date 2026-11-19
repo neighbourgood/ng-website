@@ -24,21 +24,21 @@ concrete rules that fall out of that:
 
 3. **Type carries the personality.** A characterful display serif for
    headlines, a neutral sans for UI/body, a mono for anything technical or
-   labelling. Italic serif is the accent voice — used sparingly, for the one
-   emotional phrase (e.g. *Help each other.*).
+   labelling. No italic for emphasis and no coloured word inside a headline
+   (since v1.4.0): hierarchy comes from size and colour role only.
 
-4. **Mono kickers instead of pill badges.** Small uppercase mono labels with a
-   short rule prefix (`—— FEATURES`) replace rounded badge pills. Warm brown,
-   letterspaced, quiet.
+4. **Quiet labels in sentence case.** Section labels are short sentence-case
+   text in warm brown (`Features`, `Install`), no uppercase, no tracking, no
+   rule prefix. Lists of extras are one plain sentence, not a cloud of pills.
 
 5. **Motion must mean something.** Every animation maps to a product truth:
-   the mesh canvas *is* the BLE relay, the terminal boot-up *is* the install,
-   the tilt invites you to inspect the screenshot. No motion for motion's sake.
+   the mesh canvas *is* the BLE relay. No tilt, no lift on hover, no motion
+   for motion's sake.
 
 6. **Restraint in surfaces.** Cards are flat: 1px border, radius, no default
-   shadow. Hover states are small and physical (2–3px lift, border tint,
-   modest shadow). Serif index numbers (`01`–`06`) and hairline rules give
-   structure instead of drop shadows and icon tiles.
+   shadow. Hover is a border tint, nothing moves. Hairline rules give
+   structure; cards carry no index numbers, since the features are not a
+   sequence.
 
 7. **Accessibility is non-negotiable.** Every animation has a
    `prefers-reduced-motion` path (see §6.5). Interactive elements have
@@ -63,11 +63,13 @@ concrete rules that fall out of that:
 - **Scale:** hero h1 `clamp(2.4rem, 5vw, 3.9rem)`, line-height 1.06,
   letter-spacing −0.02em. Section h2 `clamp(1.8rem, 3.4vw, 2.5rem)`,
   letter-spacing −0.015em, max-width 22ch (forces the editorial two-line wrap).
-- **Accent voice:** italic Fraunces in `--color-primary`
-  (`.hero-accent { font-style: italic }`). One phrase per page, max.
-- **Kicker/label style:** mono, 0.7–0.72rem, uppercase, letter-spacing
-  0.12–0.14em, `--color-accent` (warm brown). Kickers get a `::before` rule:
-  2rem wide, 1px tall, same color.
+- **Headline:** Fraunces regular, one colour (`--color-text`), upright. No
+  italic accent line, no gradient or coloured word.
+- **Label style:** 0.875rem, weight 500, sentence case, `--color-accent`
+  (warm brown). No uppercase, no letter-spacing.
+- **Hero visual:** a real moment from the app built in HTML (the dashboard's
+  *Needs you* panel, `.preview`), with the one-line installer as a quiet
+  copyable line (`.install-line`) under the buttons.
 
 ---
 
@@ -162,10 +164,9 @@ Keep this mapping when porting to the app.
   top bar = centered address pill (`rgba(0,0,0,0.35)` bg, mono URL, green
   padlock icon). Nav arrows: 38px circles, `rgba(10,10,20,0.55)` +
   `backdrop-filter: blur(6px)`, at 0.65 opacity until frame hover / focus.
-- **Cards:** surface bg, 1px border, radius; hover = border tints primary,
-  `translateY(-3px)`, `--shadow-md`. Feature cards carry a serif
-  `counter(feature, decimal-leading-zero)` index and a small color-coded
-  corner icon (violet = everyday, red = crisis, brown = infra).
+- **Cards:** surface bg, 1px border, radius; hover = border tint only.
+  Feature cards carry a small colour-coded corner icon (violet = everyday,
+  red = crisis, brown = infra) and no index number.
 
 ---
 
