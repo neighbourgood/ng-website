@@ -7,7 +7,7 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
-## [1.4.0] — 2026-11-18
+## [1.4.1] — 2026-11-19
 
 ### Changed
 - **Install snippet uses the ready-made Docker images** (NeighbourGood 2.9):
@@ -15,6 +15,34 @@ Versioning follows [Semantic Versioning](https://semver.org/).
   System requirements note says images exist for amd64 and arm64 instead of
   asking for swap before installing, since nothing is built on the server
   any more.
+
+## [1.4.0] — 2026-11-19
+
+Unslop pass: fewer generated-looking tells, same brand and sections.
+
+### Changed
+- **Headline without the italic accent** — "Share more. Own less. Help each
+  other." is now three upright lines in one colour. The italic violet last line
+  was the most AI-looking detail on the page.
+- **Hero shows the product** — the install terminal is replaced by the app's
+  *Needs you* panel built in HTML (Jonas asking for the drill, with Approve,
+  Decline and Message). The one-line installer moves under the buttons as a
+  quiet, copyable line.
+- **Sentence case everywhere** — the uppercase, widely spaced labels
+  ("OPEN SOURCE · GPL-3.0", "—— FEATURES", "SEE IT IN ACTION", scenario
+  places, table headers, "What you get", "More from the maintainer") and the
+  Title Case card titles, captions and buttons are now plain sentence case.
+- **No decoration that says nothing** — the 01–06 index numbers on the feature
+  cards, the flag emoji on the scenarios, the cloud of feature pills (now one
+  sentence), the dark band of tech badges (now one sentence), the violet colour
+  wash behind the hero, the hover lift on cards and the 3D tilt on the
+  screenshot frame are gone.
+- **Plainer copy** — specific headings ("What a street needs to share, and to
+  get through a crisis", "Four neighbourhoods, four situations"), "Also
+  included" now says 12 languages (it said 7), and the scenarios are described
+  as possibilities rather than "real communities".
+- `DESIGN.md` updated: no italic accent, sentence-case labels, hero preview.
+- Stylesheet cache-buster `style.css?v=14`.
 
 ## [1.3.3] — 2026-11-17
 

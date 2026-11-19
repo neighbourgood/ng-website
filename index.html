@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="version" content="1.4.0">
+  <meta name="version" content="1.4.1">
   <title>NeighbourGood — Community Resource Sharing &amp; Crisis Coordination</title>
   <meta name="description" content="A self-hostable, open-source platform for neighbourhood resource sharing and crisis coordination. Offline-first mesh networking for when it matters most.">
   <link rel="canonical" href="https://neighbourgood.eu">
@@ -30,7 +30,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css?v=13">
+  <link rel="stylesheet" href="css/style.css?v=14">
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to content</a>
@@ -64,7 +64,7 @@
           <span class="theme-icon" aria-hidden="true">&#9788;</span>
         </button>
         <a href="#install-block" class="nav-btn-primary">
-          Get Started
+          Get started
         </a>
       </div>
     </div>
@@ -76,8 +76,8 @@
       <canvas class="mesh-canvas" aria-hidden="true"></canvas>
       <div class="hero-inner fade-in">
         <div class="hero-copy">
-          <p class="hero-eyebrow">Open source &middot; GPL-3.0 &middot; Self-hosted</p>
-          <h1>Share more.<br>Own less.<br><em class="hero-accent">Help each other.</em></h1>
+          <p class="hero-eyebrow">Open source, self-hosted, GPL-3.0</p>
+          <h1>Share more.<br>Own less.<br>Help each other.</h1>
           <p class="hero-subtitle">NeighbourGood connects neighbours to share tools, skills, and resources. When a crisis hits, the same network becomes a lifeline.</p>
 
           <div class="hero-buttons">
@@ -90,36 +90,36 @@
               View on GitHub
             </a>
           </div>
+
+          <div class="install-line" id="install-block">
+            <code id="install-code"><span class="prompt">$</span> curl -fsSL https://raw.githubusercontent.com/neighbourgood/neighbourgood/main/install.sh | bash</code>
+            <button class="copy-btn" data-target="install-code" aria-label="Copy install command"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg><span>Copy</span></button>
+          </div>
+          <p class="hero-install-note">No Docker or git needed, the script finds what's installed. <a href="#install">Manual install</a></p>
         </div>
 
         <div class="hero-side">
-          <!-- Quick Install Terminal -->
-          <div class="terminal" id="install-block">
-            <div class="terminal-header">
-              <span class="terminal-title" aria-hidden="true">neighbour@server:~</span>
-              <button class="copy-btn" data-target="install-code" aria-label="Copy install command">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-                <span>Copy</span>
-              </button>
+          <!-- A real moment from the app: the dashboard's "Needs you" panel -->
+          <figure class="preview" aria-label="Preview of the NeighbourGood dashboard">
+            <div class="preview-head">
+              <span class="preview-community">Kreuzberg Wrangelkiez · 48 members</span>
+              <span class="preview-title">Needs you</span>
             </div>
-            <code id="install-code" class="wrap" data-typewriter><span class="prompt">$</span> curl -fsSL https://raw.githubusercontent.com/neighbourgood/neighbourgood/main/install.sh | bash</code>
-          </div>
-          <p class="hero-install-note">No Docker or git required &mdash; the script detects what's installed and falls back automatically. Prefer to do it by hand? <a href="#install">See manual install</a>.</p>
-
-          <div class="hero-endpoints">
-            <div class="hero-endpoint">
-              <div class="hero-endpoint-label">Frontend</div>
-              <div class="hero-endpoint-value">localhost:3800</div>
+            <div class="preview-row is-open">
+              <span class="preview-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+              <span class="preview-text"><strong>Jonas wants to borrow your cordless drill</strong><span>Sat 21 – Sun 22 Nov</span></span>
+              <p class="preview-note">“Putting up shelves in the kids’ room, back Sunday evening.”</p>
+              <span class="preview-actions"><span class="preview-btn">Approve</span><span class="preview-link">Decline</span><span class="preview-link">Message Jonas</span></span>
             </div>
-            <div class="hero-endpoint">
-              <div class="hero-endpoint-label">API</div>
-              <div class="hero-endpoint-value">localhost:8300</div>
+            <div class="preview-row">
+              <span class="preview-icon is-quiet"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+              <span class="preview-text"><strong>Cargo bike (Long John) for Saturday</strong><span>Waiting for Mara</span></span>
             </div>
-            <div class="hero-endpoint">
-              <div class="hero-endpoint-label">Docs</div>
-              <div class="hero-endpoint-value">localhost:8300/docs</div>
+            <div class="preview-row">
+              <span class="preview-icon is-quiet"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+              <span class="preview-text"><strong>Aylin: Can you help at the repair café?</strong><span>1 unread message</span></span>
             </div>
-          </div>
+          </figure>
         </div>
       </div>
     </section>
@@ -149,21 +149,21 @@
       <div class="section-inner">
         <div class="section-header reveal">
           <span class="section-label">Features</span>
-          <h2>Built for communities, ready for anything</h2>
-          <p>From everyday resource sharing to emergency coordination — one platform that adapts when it matters most.</p>
+          <h2>What a street needs to share, and to get through a crisis</h2>
+          <p>Everyday sharing and emergency coordination in one app, run by the neighbourhood itself.</p>
         </div>
 
         <div class="feature-grid">
           <!-- Blue Sky row -->
           <div class="feature-row-label reveal">
-            <span class="mode-blue">Everyday — Blue Sky Mode</span>
+            <span class="mode-blue">Everyday, in Blue Sky mode</span>
           </div>
 
           <div class="feature-card reveal">
             <div class="feature-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
             </div>
-            <h3>Share Resources</h3>
+            <h3>Share resources</h3>
             <p>Lend and borrow tools, vehicles, equipment, and more within your neighbourhood. Calendar-based booking with request and approval keeps everything organised.</p>
           </div>
 
@@ -171,7 +171,7 @@
             <div class="feature-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
             </div>
-            <h3>Exchange Skills</h3>
+            <h3>Exchange skills</h3>
             <p>Offer your expertise and learn from neighbours — from cooking to carpentry. Ten skill categories with a reputation system you can trust.</p>
           </div>
 
@@ -179,20 +179,20 @@
             <div class="feature-icon accent" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
             </div>
-            <h3>Telegram Integration</h3>
+            <h3>Telegram</h3>
             <p>Link your neighbourhood to Telegram and stay in the loop where you already chat. Get instant alerts for new borrow requests, offers, and updates &mdash; no need to open the app.</p>
           </div>
 
           <!-- Red Sky row -->
           <div class="feature-row-label reveal">
-            <span class="mode-red">Crisis — Red Sky Mode</span>
+            <span class="mode-red">In a crisis, in Red Sky mode</span>
           </div>
 
           <div class="feature-card reveal">
             <div class="feature-icon crisis" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
             </div>
-            <h3>Crisis Ready</h3>
+            <h3>Crisis mode</h3>
             <p>When disaster strikes, switch to emergency mode for rapid community coordination. Low-bandwidth UI adapts automatically for degraded networks.</p>
           </div>
 
@@ -200,7 +200,7 @@
             <div class="feature-icon crisis" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1111 8H2m10.59 11.41A2 2 0 1014 16H2m15.73-8.27A2.5 2.5 0 1119.5 12H2"/></svg>
             </div>
-            <h3>Offline Mesh Networking</h3>
+            <h3>Offline Bluetooth mesh</h3>
             <p>Bluetooth Low Energy mesh relays critical messages up to 7 hops (~700m) with no internet required. Crisis tickets broadcast device-to-device.</p>
           </div>
 
@@ -208,22 +208,13 @@
             <div class="feature-icon accent" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
             </div>
-            <h3>Self-Hosted</h3>
+            <h3>Self-hosted</h3>
             <p>Run it on your own server. Raspberry Pi to cloud. Your community's data stays in your community. Federate with other instances.</p>
           </div>
         </div>
 
         <!-- Also Includes -->
-        <div class="also-includes reveal">
-          <span class="tag">Multi-language (7 langs, RTL)</span>
-          <span class="tag">Telegram Bot</span>
-          <span class="tag">Webhooks (HMAC-SHA256)</span>
-          <span class="tag">Full PWA</span>
-          <span class="tag">Neighbourhood Leaders</span>
-          <span class="tag">Emergency Ticketing</span>
-          <span class="tag">Reputation System</span>
-          <span class="tag">Instance Federation</span>
-        </div>
+        <p class="also-includes reveal">Also included: 12 languages including Arabic and Farsi, a Telegram bot, signed webhooks, an installable app (PWA), neighbourhood leaders, emergency tickets, reputation and reviews, and links between instances.</p>
       </div>
     </section>
 
@@ -231,14 +222,14 @@
     <section id="screenshots" class="section">
       <div class="section-inner">
         <div class="section-header reveal">
-          <span class="section-label">See It In Action</span>
+          <span class="section-label">In the app</span>
           <h2>A look inside the app</h2>
           <p>Real screens from a running NeighbourGood instance.</p>
         </div>
 
         <div class="slideshow reveal" data-slideshow>
           <div class="slideshow-stage">
-          <div class="slideshow-frame" data-tilt>
+          <div class="slideshow-frame">
             <div class="browser-bar" aria-hidden="true">
               <span class="browser-url">
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
@@ -247,15 +238,15 @@
             </div>
             <div class="slideshow-viewport">
               <div class="slideshow-track">
-                <div class="slideshow-slide" data-title="Find Your Community" data-desc="Discover neighbourhoods on the map, join with an invite code, and see who's already sharing nearby.">
+                <div class="slideshow-slide" data-title="Find your community" data-desc="Discover neighbourhoods on the map, join with an invite code, and see who's already sharing nearby.">
                   <img class="shot-light" src="images/screenshot-communities.png" alt="NeighbourGood Communities page: a map of Berlin with nearby neighbourhoods, and the user's community Kreuzberg Wrangelkiez with 48 members" loading="lazy" width="880" height="640">
                   <img class="shot-dark" src="images/screenshot-communities-dark.png" alt="NeighbourGood Communities page in dark mode: a map of Berlin with nearby neighbourhoods, and the user's community Kreuzberg Wrangelkiez with 48 members" loading="lazy" width="880" height="640">
                 </div>
-                <div class="slideshow-slide" data-title="Share What You Have" data-desc="Browse and list tools, clothing, food, and more &mdash; searchable by category so neighbours find exactly what they need.">
+                <div class="slideshow-slide" data-title="Share what you have" data-desc="Browse and list tools, clothing, food, and more &mdash; searchable by category so neighbours find exactly what they need.">
                   <img class="shot-light" src="images/screenshot-resources.png" alt="NeighbourGood Shared Resources page: cards for a sewing machine, pressure washer, cargo bike and more, one opened to show its description, Request to borrow and Message buttons" loading="lazy" width="880" height="640">
                   <img class="shot-dark" src="images/screenshot-resources-dark.png" alt="NeighbourGood Shared Resources page in dark mode: cards for a sewing machine, pressure washer, cargo bike and more, one opened to show its description, Request to borrow and Message buttons" loading="lazy" width="880" height="640">
                 </div>
-                <div class="slideshow-slide" data-title="High-End Integrations" data-desc="Link Telegram for instant alerts, enable Bluetooth mesh networking for offline crisis chat, or wire up signed webhooks to Slack and Discord.">
+                <div class="slideshow-slide" data-title="Telegram, Bluetooth mesh and webhooks" data-desc="Link Telegram for instant alerts, enable Bluetooth mesh networking for offline crisis chat, or wire up signed webhooks to Slack and Discord.">
                   <img class="shot-light" src="images/screenshot-settings.png" alt="NeighbourGood Settings page with Telegram notification linking, the Bluetooth mesh networking switch and outbound webhooks" loading="lazy" width="880" height="640">
                   <img class="shot-dark" src="images/screenshot-settings-dark.png" alt="NeighbourGood Settings page in dark mode with Telegram notification linking, the Bluetooth mesh networking switch and outbound webhooks" loading="lazy" width="880" height="640">
                 </div>
@@ -271,7 +262,7 @@
           </div>
 
           <div class="slideshow-caption">
-            <h3 data-slide-title>Find Your Community</h3>
+            <h3 data-slide-title>Find your community</h3>
             <p data-slide-desc>Discover neighbourhoods on the map, join with an invite code, and see who's already sharing nearby.</p>
           </div>
 
@@ -288,19 +279,18 @@
     <section id="scenarios" class="section">
       <div class="section-inner">
         <div class="section-header reveal">
-          <span class="section-label">Usage Scenarios</span>
-          <h2>Communities around the world</h2>
-          <p>NeighbourGood adapts to the needs of real communities in real situations.</p>
+          <span class="section-label">Scenarios</span>
+          <h2>Four neighbourhoods, four situations</h2>
+          <p>How a neighbourhood could use it, in four very different places.</p>
         </div>
 
         <div class="scenario-grid">
           <div class="scenario-card reveal">
             <div class="scenario-header">
-              <span class="scenario-flag" aria-hidden="true">&#127481;&#127479;</span>
               <span class="scenario-location">Hatay, T&uuml;rkiye</span>
             </div>
-            <h3>Post-Earthquake Coordination</h3>
-            <p>After the earthquake, mobile networks are unreliable. A neighbourhood switches to Red Sky Mode. Emergency pings ripple through the Bluetooth mesh: a family needs insulin. Three hops away, a pharmacist marks an offer ticket. The neighbourhood leader coordinates a walking route to deliver it. No internet required.</p>
+            <h3>After an earthquake</h3>
+            <p>After the earthquake, mobile networks are unreliable. A neighbourhood switches to Red Sky mode. Emergency pings ripple through the Bluetooth mesh: a family needs insulin. Three hops away, a pharmacist marks an offer ticket. The neighbourhood leader coordinates a walking route to deliver it. No internet required.</p>
             <div class="scenario-tags">
               <span class="scenario-tag red-sky">Red Sky</span>
             </div>
@@ -308,10 +298,9 @@
 
           <div class="scenario-card reveal">
             <div class="scenario-header">
-              <span class="scenario-flag" aria-hidden="true">&#127465;&#127466;</span>
               <span class="scenario-location">Berlin Kreuzberg, Germany</span>
             </div>
-            <h3>Everyday Neighbourhood Sharing</h3>
+            <h3>Everyday sharing</h3>
             <p>In a Kreuzberg Kiez, 140 neighbours share a NeighbourGood instance. Someone books the communal cargo bike for Saturday via the calendar. A retired carpenter offers woodworking lessons every Tuesday. A Syrian family browses the instance in Arabic (RTL). The carpenter is Trust Level 4 — vouched for by dozens of neighbours over two years.</p>
             <div class="scenario-tags">
               <span class="scenario-tag blue-sky">Blue Sky</span>
@@ -320,10 +309,9 @@
 
           <div class="scenario-card reveal">
             <div class="scenario-header">
-              <span class="scenario-flag" aria-hidden="true">&#127470;&#127475;</span>
               <span class="scenario-location">Kerala, India</span>
             </div>
-            <h3>Monsoon Flood Response</h3>
+            <h3>Monsoon floods</h3>
             <p>August floods cut power and mobile data across several panchayats. Federated NeighbourGood instances share emergency tickets across neighbourhood boundaries. Offer tickets for boats and dry food flow between instances. The low-bandwidth UI works on 2G connections. A Telegram bot relays critical pings to phones with SMS connectivity.</p>
             <div class="scenario-tags">
               <span class="scenario-tag red-sky">Red Sky</span>
@@ -332,10 +320,9 @@
 
           <div class="scenario-card reveal">
             <div class="scenario-header">
-              <span class="scenario-flag" aria-hidden="true">&#127463;&#127479;</span>
               <span class="scenario-location">Rocinha, Rio de Janeiro, Brazil</span>
             </div>
-            <h3>Community Resilience</h3>
+            <h3>Staying connected</h3>
             <p>In Rocinha, a community runs NeighbourGood on a Raspberry Pi at a community centre. Fifty families share childcare, tools, and bulk food purchases. The invite code system keeps the instance within the community. When heavy rains trigger landslide risk, the instance switches to Red Sky. The mesh network bridges the steep hillside terrain where cell coverage is spotty.</p>
             <div class="scenario-tags">
               <span class="scenario-tag blue-sky">Blue Sky</span>
@@ -348,31 +335,7 @@
 
     <!-- Tech Stack Strip -->
     <div class="tech-strip">
-      <div class="tech-strip-inner reveal">
-        <div class="tech-badges">
-          <span class="tech-badge">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            SvelteKit
-          </span>
-          <span class="tech-badge">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-            FastAPI
-          </span>
-          <span class="tech-badge">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-            PostgreSQL / SQLite
-          </span>
-          <span class="tech-badge">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
-            Docker Compose
-          </span>
-          <span class="tech-badge">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 6.5l11 11"/><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/><path d="M12 3v4m0 10v4M3 12h4m10 0h4"/></svg>
-            BLE Mesh
-          </span>
-        </div>
-        <p>Self-host on any machine — Raspberry Pi to cloud server, with or without Docker. Your data stays with your community.</p>
-      </div>
+      <p class="tech-strip-inner reveal">Built with SvelteKit, FastAPI, PostgreSQL or SQLite and Docker Compose. It runs on almost any machine, from a Raspberry Pi to a cloud server, and your data stays with your community.</p>
     </div>
 
     <!-- Install Section -->
@@ -456,7 +419,7 @@
               <span class="endpoint-value">:8300</span>
             </div>
             <div class="endpoint-row">
-              <span class="endpoint-label">API Docs</span>
+              <span class="endpoint-label">API docs</span>
               <span class="endpoint-value">:8300/docs</span>
             </div>
           </div>
@@ -539,7 +502,7 @@
       <nav class="footer-links" aria-label="Footer navigation">
         <a href="https://github.com/neighbourgood/neighbourgood" target="_blank" rel="noopener">GitHub</a>
         <a href="https://github.com/neighbourgood/neighbourgood#readme" target="_blank" rel="noopener">Documentation</a>
-        <a href="https://github.com/neighbourgood/neighbourgood/issues" target="_blank" rel="noopener">Report an Issue</a>
+        <a href="https://github.com/neighbourgood/neighbourgood/issues" target="_blank" rel="noopener">Report an issue</a>
         <a href="https://github.com/neighbourgood/neighbourgood/blob/main/LICENSE" target="_blank" rel="noopener">License</a>
       </nav>
       <p class="footer-tagline">Built for neighbours, by neighbours.</p>
